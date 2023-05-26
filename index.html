@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+  <title>Document</title>
+</head>
+<h1 id="heading1">hej</h1>
+<body>
+  <div id="EventDiv">
+
+    <p id="time"></p>
+    <img id="pic" src="dice-1.png" style=" height: 100px; width: 100px; ">
+    <img id="pic2" src="dice-6.png" style=" height: 1px; width: 1px; ">
+  
+  </div>
+
+  <div class="button-container">
+    <button onclick="changeBackGround()" class = "hover-effect">Change Bg</button>
+    <button onclick="changeHeaderText()" class = "hover-effect">Good vibes</button>
+    <button class = "hover-effect" >Time</button>
+    <button onclick="changeImageSource()" class = "hover-effect" >Change picure</button>
+    <button class = "hover-effect" >Hide picture</button>
+    <button class = "hover-effect" >Show Picture</button>
+    
+  
+  </div>
+
+  <style>
+    .red {
+        background-color: red;
+    }
+  </style>
+
+    <script>
+
+        function changeHeaderText() {
+            const header = document.getElementById("heading1");
+            const newHeading = document.createElement("h2");
+            newHeading.textContent = "Gör ditt bästa!";
+
+            header.appendChild(newHeading);
+        }
+
+        function changeBackGround() {
+            var btn1 = document.getElementsByTagName("button");
+
+            for (let i = 0; i < btn1.length; i++) {
+                btn1[i].style.backgroundColor = "red";
+            }
+            
+        }
+    
+
+        function changeImageSource() {
+            var image = document.getElementById("pic");
+            image.setAttribute(src = "dice-6.png");
+        }
+    </script>
+
+
+
+  
+
+</body>
+</html>
